@@ -5,6 +5,7 @@ class StocksController < ApplicationController
         if params[:stock].present?
             @stock = Stock.new_lookup(params[:stock])
             #render json: @stock
+            #byebug
             if @stock
                 respond_to do |format|
                     format.js { render partial: 'users/result'}
